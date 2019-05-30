@@ -67,11 +67,4 @@ class BottleTest
     }
 
 
-     @Test
-    fun fullSong() {
-
-        val text = LoadSong().songToString()
-
-      assertThat(Bottle().song(),`is`(text))
-    }
 }
