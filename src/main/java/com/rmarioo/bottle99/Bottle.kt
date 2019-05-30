@@ -1,9 +1,7 @@
 package com.rmarioo.bottle99
 
 class Bottle {
-    fun song(): String {
-        return ""
-    }
+
 
     fun verse(number: Int): String {
 
@@ -22,6 +20,16 @@ class Bottle {
             "$number bottles of beer on the wall, $number bottles of beer.\n" +
             "Take one down and pass it around, ${number-1} bottles of beer on the wall.\n"
 
+    }
+
+    fun verses(start: Int ,end: Int): String
+    {
+       return (start downTo end).map(this::verse).joinToString(separator = "\n")
+    }
+
+    fun song(): String
+    {
+      return verses(99,0)
     }
 
 }

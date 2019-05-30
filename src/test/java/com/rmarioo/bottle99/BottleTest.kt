@@ -1,6 +1,7 @@
 package com.rmarioo.bottle99
 
 import org.hamcrest.CoreMatchers.`is`
+import org.junit.Assert
 import org.junit.Assert.assertThat
 import org.junit.Test
 
@@ -51,4 +52,26 @@ class BottleTest
                         "Go to the store and buy some more, 99 bottles of beer on the wall."))
     }
 
+    @Test
+    fun multipleVerses() {
+
+        val verses = Bottle().verses(1, 0)
+
+        Assert.assertThat(verses,`is`(
+                "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+                "Take it down and pass it around, no more bottles of beer on the wall.\n" +
+                "\n" +
+                "No more bottles of beer on the wall, no more bottles of beer.\n" +
+                "Go to the store and buy some more, 99 bottles of beer on the wall."
+        ));
+    }
+
+
+     @Test
+    fun fullSong() {
+
+        val text = LoadSong().songToString()
+
+      assertThat(Bottle().song(),`is`(text))
+    }
 }

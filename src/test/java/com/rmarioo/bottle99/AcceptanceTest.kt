@@ -4,7 +4,6 @@ import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert
 import org.junit.Ignore
 import org.junit.Test
-import java.io.File
 
 class AcceptanceTest {
 
@@ -12,10 +11,10 @@ class AcceptanceTest {
     @Test
     fun createSong() {
 
-        val file: String = ClassLoader.getSystemResource("song.txt").file
-
-        val text = File(file).readText();
+        val text = LoadSong().songToString()
 
         Assert.assertThat(Bottle().song(),`is`(text))
     }
+
+
 }
