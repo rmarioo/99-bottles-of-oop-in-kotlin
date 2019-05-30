@@ -3,32 +3,15 @@ package com.rmarioo.bottle99
 class Bottle {
 
 
-    fun verse(number: Int): String {
-
-     return if (number ==0)
-             "No more bottles of beer on the wall, " +
-             "no more bottles of beer.\n" +
-             "Go to the store and buy some more, " +
-             "99 bottles of beer on the wall."
-         else
-         if (number ==1)
-             "1 bottle of beer on the wall, " +
-             "1 bottle of beer.\n" +
-             "Take it down and pass it around, " +
-             "no more bottles of beer on the wall.\n"
-         else
-         if (number ==2)
-            "2 bottles of beer on the wall, " +
-            "2 bottles of beer.\n" +
-            "Take one down and pass it around, " +
-            "1 bottle of beer on the wall.\n"
-        else
-            "$number bottles of beer on the wall, " +
-            "$number bottles of beer.\n" +
-            "Take one down and pass it around, " +
-            "${number-1} bottles of beer on the wall.\n"
-
-    }
+    fun verse(n: Int): String
+    {
+       return "${ if (n == 0)  "No more" else n} bottle${ if (n != 1) "s" else "" }" + " of beer on the wall, " +
+        "${ if (n == 0)  "no more" else n} bottle${ if (n != 1) "s" else ""} of beer.\n" +
+        "${ if (n > 0)  "Take ${if (n > 1) "one" else "it"} down and pass it around"
+            else "Go to the store and buy some more"}, " +
+        "${if ((n-1) < 0)  99 else if ((n-1) == 0) "no more" else n-1} " +
+                "bottle${if (n-1 != 1) "s" else ""} of beer on the wall.\n"
+}
 
     fun verses(start: Int ,end: Int): String
     {
