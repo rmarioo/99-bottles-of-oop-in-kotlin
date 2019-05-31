@@ -23,6 +23,8 @@ open class BottleNumber(val number: Int)
                   return BottleNumber0()
               if (number ==1 )
                   return BottleNumber1()
+               if (number ==6 )
+                   return BottleNumber6()
               return BottleNumber(number)
           }
        }

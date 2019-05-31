@@ -8,8 +8,6 @@ class Bottle {
          val current     = BottleNumber.`for`(number)
          var next        = BottleNumber.`for`(successor(number))
 
-
-
      return "${current.capitalized()} of beer on the wall, " +
              "${current} of beer.\n" +
                current.action() +
