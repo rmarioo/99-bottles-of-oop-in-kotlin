@@ -37,7 +37,7 @@ class Bottle {
 
     fun song(): String
     {
-      return verses(99,0)
+      return verses(99,0) + "\n"
     }
 
 }
