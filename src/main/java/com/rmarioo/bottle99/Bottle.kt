@@ -5,12 +5,12 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-         val current     = BottleNumber.`for`(number)
+        val current = BottleNumber.`for`(number)
 
-     return "${current.capitalized()} of beer on the wall, " +
-             "${current} of beer.\n" +
-               current.action() +
-             "${current.successor()} of beer on the wall.\n"
+        return "${current.capitalized()} of beer on the wall, " +
+                "${current} of beer.\n" +
+                   current.action() +
+                "${current.successor()} of beer on the wall.\n"
 
     }
 
