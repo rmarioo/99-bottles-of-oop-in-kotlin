@@ -6,7 +6,8 @@ class Bottle {
     fun verse(number: Int): String {
 
          val current     = BottleNumber.`for`(number)
-         val next        = BottleNumber.`for`(successor(number))
+         var next        = BottleNumber.`for`(successor(number))
+
 
 
      return "${current.capitalized()} of beer on the wall, " +
