@@ -1,12 +1,10 @@
 package com.rmarioo.bottle99
 
-class BottleNumber(val number: Int)
-{
 
-    fun capitalizedQuantity(): String {
-        return quantity().capitalize()
-    }
-    fun quantity(): String {
+open class BottleNumber(val number: Int)
+   {
+
+    open fun quantity(): String {
         if (this.number ==0)
             return "no more"
         return this.number.toString()
