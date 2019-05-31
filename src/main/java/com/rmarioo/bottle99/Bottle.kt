@@ -9,7 +9,7 @@ class Bottle {
         val nextBottleNumber = bottleNumber.successor()
 
 
-     return "${bottleNumber.quantity().capitalize()} ${bottleNumber.container()} of beer on" +
+     return "${bottleNumber.capitalizedQuantity()} ${bottleNumber.container()} of beer on" +
              " the wall, " +
             "${bottleNumber.quantity()} ${bottleNumber.container()} of beer.\n" +
              bottleNumber.action() +
