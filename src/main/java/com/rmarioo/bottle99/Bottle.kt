@@ -26,6 +26,8 @@ class Bottle {
     private fun bottleNumberFor(number: Int): BottleNumber {
         if (number ==0)
             return BottleNumber0()
+        if (number ==1 )
+            return BottleNumber1()
         return BottleNumber(number)
     }
 
