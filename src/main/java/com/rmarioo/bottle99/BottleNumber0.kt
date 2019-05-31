@@ -7,6 +7,8 @@ class BottleNumber0(): BottleNumber(0) {
 
     override fun action(): String = "Go to the store and buy some more, "
 
-
+     override fun successor(): BottleNumber {
+      return BottleNumber.`for`(99)
+    }
 
 }

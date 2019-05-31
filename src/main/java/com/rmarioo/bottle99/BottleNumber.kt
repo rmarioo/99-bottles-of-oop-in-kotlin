@@ -12,7 +12,9 @@ open class BottleNumber(val number: Int)
 
     fun capitalized(): String = this.toString().capitalize()
 
-
+        open fun successor(): BottleNumber {
+           return BottleNumber.`for`(number -1)
+       }
     open fun action(): String = "Take one down and pass it around, "
 
 
