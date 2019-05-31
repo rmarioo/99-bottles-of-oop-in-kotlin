@@ -9,7 +9,7 @@ class Bottle {
              "No more bottles of beer on the wall, " +
              "no more bottles of beer.\n" +
              "Go to the store and buy some more, " +
-             "99 bottles of beer on the wall."
+             "99 bottles of beer on the wall.\n"
          else
          if (number ==1)
              "1 bottle of beer on the wall, " +
@@ -37,7 +37,7 @@ class Bottle {
 
     fun song(): String
     {
-      return verses(99,0) + "\n"
+      return verses(99,0)
     }
 
 }
