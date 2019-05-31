@@ -5,15 +5,14 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-        val bottleNumber     = BottleNumber(number)
-        val nextBottleNumber = bottleNumber.successor()
+        val current     = BottleNumber(number)
+        val next        = current.successor()
 
 
-     return "${bottleNumber.capitalizedQuantity()} ${bottleNumber.container()} of beer on" +
-             " the wall, " +
-            "${bottleNumber.quantity()} ${bottleNumber.container()} of beer.\n" +
-             bottleNumber.action() +
-            "${nextBottleNumber.quantity()} ${nextBottleNumber.container()} of beer on the wall.\n"
+     return "${current.capitalizedQuantity()} ${current.container()} of beer on the wall, " +
+             "${current.quantity()} ${current.container()} of beer.\n" +
+               current.action() +
+             "${next.quantity()} ${next.container()} of beer on the wall.\n"
 
     }
 
