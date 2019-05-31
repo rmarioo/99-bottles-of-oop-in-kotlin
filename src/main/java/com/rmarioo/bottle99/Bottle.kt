@@ -5,9 +5,8 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-
-        val current     = bottleNumberFor(number)
-        val next        = bottleNumberFor(successor(number))
+         val current     = BottleNumber.`for`(number)
+         val next        = BottleNumber.`for`(successor(number))
 
 
      return "${current.capitalized()} of beer on the wall, " +
@@ -23,13 +22,7 @@ class Bottle {
         return number -1
     }
 
-    private fun bottleNumberFor(number: Int): BottleNumber {
-        if (number ==0)
-            return BottleNumber0()
-        if (number ==1 )
-            return BottleNumber1()
-        return BottleNumber(number)
-    }
+
 
     fun verses(start: Int ,end: Int): String
     {
