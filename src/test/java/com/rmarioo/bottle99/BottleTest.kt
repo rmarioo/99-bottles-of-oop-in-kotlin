@@ -49,7 +49,7 @@ class BottleTest
         val result = Bottle().verse(0)
         assertThat(result,`is`(
                 "No more bottles of beer on the wall, no more bottles of beer.\n" +
-                        "Go to the store and buy some more, 99 bottles of beer on the wall."))
+                        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"))
     }
 
     @Test
@@ -62,7 +62,7 @@ class BottleTest
                 "Take it down and pass it around, no more bottles of beer on the wall.\n" +
                 "\n" +
                 "No more bottles of beer on the wall, no more bottles of beer.\n" +
-                "Go to the store and buy some more, 99 bottles of beer on the wall."
+                "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
         ));
     }
 

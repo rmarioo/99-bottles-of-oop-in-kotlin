@@ -5,17 +5,23 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-     return if (number ==0)
-             "No more bottles of beer on the wall, " +
-             "no more bottles of beer.\n" +
-             "Go to the store and buy some more, " +
-             "99 bottles of beer on the wall."
-         else
-            "$number ${container(number)} of beer on the wall, " +
-            "$number ${container(number)} of beer.\n" +
-            "Take ${pronoun(number)} down and pass it around, " +
-            "${quantity(number-1)} ${container(number-1)} of beer on the wall.\n"
+     return "${quantity(number).capitalize()} ${container(number)} of beer on the wall, " +
+            "${quantity(number)} ${container(number)} of beer.\n" +
+                    action(number) +
+            "${quantity(successor(number))} ${container(successor(number))} of beer on the wall.\n"
 
+    }
+
+    private fun successor(number: Int): Int {
+        if (number ==0)
+            return 99
+        return number - 1
+    }
+
+    private fun action(number: Int): String {
+        if (number ==0)
+            return "Go to the store and buy some more, "
+        return "Take ${pronoun(number)} down and pass it around, "
     }
 
     private fun quantity(number: Int): String {
@@ -45,7 +51,7 @@ class Bottle {
 
     fun song(): String
     {
-      return verses(99,0) + "\n"
+      return verses(99,0)
     }
 
 }
