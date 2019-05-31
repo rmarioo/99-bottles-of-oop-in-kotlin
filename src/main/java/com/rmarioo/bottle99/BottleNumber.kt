@@ -5,7 +5,6 @@ open class BottleNumber(val number: Int)
    {
 
     open fun quantity(): String {
-
         return this.number.toString()
     }
 
