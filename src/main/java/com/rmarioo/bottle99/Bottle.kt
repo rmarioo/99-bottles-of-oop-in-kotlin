@@ -14,14 +14,6 @@ class Bottle {
 
     }
 
-    private fun successor(number: Int): Int {
-        if (number == 0)
-            return 99
-        return number -1
-    }
-
-
-
     fun verses(start: Int ,end: Int): String
     {
        return (start downTo end).map(this::verse).joinToString(separator = "\n")
