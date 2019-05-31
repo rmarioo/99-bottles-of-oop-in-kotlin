@@ -23,9 +23,7 @@ open class BottleNumber(val number: Int)
     }
 
 
-    fun action(): String {
-        if (this.number ==0)
-            return "Go to the store and buy some more, "
+    open fun action(): String {
         return "Take ${pronoun()} down and pass it around, "
     }
 
