@@ -7,7 +7,7 @@ class Bottle {
 
 
         val current     = bottleNumberFor(number)
-        val next        = current.successor()
+        val next        = bottleNumberFor(successor(number))
 
 
      return "${current.capitalized()} of beer on the wall, " +
@@ -15,6 +15,12 @@ class Bottle {
                current.action() +
              "${next} of beer on the wall.\n"
 
+    }
+
+    private fun successor(number: Int): Int {
+        if (number == 0)
+            return 99
+        return number -1
     }
 
     private fun bottleNumberFor(number: Int): BottleNumber {
