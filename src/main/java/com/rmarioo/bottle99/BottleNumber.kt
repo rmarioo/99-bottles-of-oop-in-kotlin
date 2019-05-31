@@ -33,11 +33,5 @@ open class BottleNumber(val number: Int)
         return "one"
     }
 
-    fun successor(): BottleNumber {
-        if (number ==0)
-            return BottleNumber(99)
-        return BottleNumber(number-1)
-    }
 
-
-}
+   }
