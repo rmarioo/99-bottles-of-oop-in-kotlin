@@ -22,6 +22,10 @@ class BottleNumber(val number: Int)
         return "${quantity()} ${container()}"
     }
 
+    fun capitalized(): String {
+        return this.toString().capitalize();
+    }
+
 
     fun action(): String {
         if (this.number ==0)
