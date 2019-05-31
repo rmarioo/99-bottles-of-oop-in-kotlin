@@ -18,6 +18,11 @@ class BottleNumber(val number: Int)
         return "bottles"
     }
 
+    override fun toString(): String {
+        return "${quantity()} ${container()}"
+    }
+
+
     fun action(): String {
         if (this.number ==0)
             return "Go to the store and buy some more, "
@@ -35,4 +40,6 @@ class BottleNumber(val number: Int)
             return BottleNumber(99)
         return BottleNumber(number-1)
     }
+
+
 }

@@ -10,9 +10,9 @@ class Bottle {
 
 
      return "${current.capitalizedQuantity()} ${current.container()} of beer on the wall, " +
-             "${current.quantity()} ${current.container()} of beer.\n" +
+             "${current} of beer.\n" +
                current.action() +
-             "${next.quantity()} ${next.container()} of beer on the wall.\n"
+             "${next} of beer on the wall.\n"
 
     }
 
