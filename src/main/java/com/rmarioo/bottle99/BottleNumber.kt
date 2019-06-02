@@ -32,4 +32,10 @@ class BottleNumber(val number: Int)
             return BottleNumber(99)
         return BottleNumber(number-1)
     }
+
+    override fun toString(): String {
+        return "${quantity()} ${container()}"
+    }
+
+
 }

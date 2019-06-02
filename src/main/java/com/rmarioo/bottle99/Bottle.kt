@@ -9,10 +9,10 @@ class Bottle {
         val next        = current.successor()
 
 
-     return "${current.quantity().capitalize()} ${current.container()} of beer on the wall, " +
-             "${current.quantity()} ${current.container()} of beer.\n" +
+     return "${"$current".capitalize()} of beer on the wall, " +
+             "${current} of beer.\n" +
                current.action() +
-             "${next.quantity()} ${next.container()} of beer on the wall.\n"
+             "${next} of beer on the wall.\n"
 
     }
 
