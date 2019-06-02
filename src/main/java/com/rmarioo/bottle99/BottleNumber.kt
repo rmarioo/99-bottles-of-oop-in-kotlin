@@ -25,6 +25,7 @@ open class BottleNumber(val number: Int)
          fun numberFor(number: Int): BottleNumber {
             return if (number == 0) ZeroBottle()
             else if (number == 1) OneBottle()
+            else if (number == 6) SixPacks()
             else BottleNumber(number)
         }
     }
