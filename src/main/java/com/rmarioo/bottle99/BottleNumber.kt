@@ -28,9 +28,9 @@ class BottleNumber(val number: Int)
     }
 
     fun successor(): BottleNumber {
-        if (number ==0)
-            return BottleNumber(99)
-        return BottleNumber(number-1)
+        return if (number ==0)
+             BottleNumber(99)
+        else BottleNumber(number-1)
     }
 
     override fun toString(): String {

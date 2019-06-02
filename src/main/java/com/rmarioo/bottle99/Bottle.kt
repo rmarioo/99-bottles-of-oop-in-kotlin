@@ -5,8 +5,8 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-        val current     = BottleNumber(number)
-        val next        = current.successor()
+        val current     = numberFor(number)
+        val next        = numberFor(successor(number))
 
 
      return "${"$current".capitalize()} of beer on the wall, " +
@@ -15,6 +15,18 @@ class Bottle {
              "${next} of beer on the wall.\n"
 
     }
+
+    private fun successor(number: Int): Int {
+       return if (number== 0) 99 else number-1
+    }
+
+    private fun numberFor(number: Int): BottleNumber {
+        return BottleNumber(number)
+    }
+
+
+
+
 
     fun verses(start: Int ,end: Int): String
     {
