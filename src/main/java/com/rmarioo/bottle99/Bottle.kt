@@ -16,13 +16,17 @@ class Bottle {
 
     }
 
+    private fun numberFor(number: Int): BottleNumber {
+        return if (number == 0) ZeroBottle()
+        else if (number == 1) OneBottle()
+        else BottleNumber(number)
+    }
+
+
     private fun successor(number: Int): Int {
        return if (number== 0) 99 else number-1
     }
 
-    private fun numberFor(number: Int): BottleNumber {
-        return BottleNumber(number)
-    }
 
 
 
