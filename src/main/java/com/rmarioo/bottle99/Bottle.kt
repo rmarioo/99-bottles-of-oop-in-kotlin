@@ -1,36 +1,20 @@
 package com.rmarioo.bottle99
 
+import com.rmarioo.bottle99.BottleNumber.Companion.numberFor
+
 class Bottle {
 
 
     fun verse(number: Int): String {
 
-        val current     = numberFor(number)
-        val next        = numberFor(successor(number))
+        val bottleNumber = numberFor(number)
 
-
-     return "${"$current".capitalize()} of beer on the wall, " +
-             "${current} of beer.\n" +
-               current.action() +
-             "${next} of beer on the wall.\n"
+        return "${bottleNumber.capitalize()} of beer on the wall, " +
+                "${bottleNumber} of beer.\n" +
+                   bottleNumber.action() +
+                "${bottleNumber.successor()} of beer on the wall.\n"
 
     }
-
-    private fun numberFor(number: Int): BottleNumber {
-        return if (number == 0) ZeroBottle()
-        else if (number == 1) OneBottle()
-        else BottleNumber(number)
-    }
-
-
-    private fun successor(number: Int): Int {
-       return if (number== 0) 99 else number-1
-    }
-
-
-
-
-
 
     fun verses(start: Int ,end: Int): String
     {
