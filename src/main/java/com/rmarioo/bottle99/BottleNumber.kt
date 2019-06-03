@@ -19,14 +19,16 @@ open class BottleNumber(val number: Int) {
 
 
     companion object {
+
+        val bottleNumbersMap: Map<Int, BottleNumber> =
+                mapOf(0 to BottleNumber0(),
+                      1 to BottleNumber1(),
+                      6 to BottleNumber6())
+
         fun `for`(number: Int): BottleNumber {
-            if (number == 0)
-                return BottleNumber0()
-            if (number == 1)
-                return BottleNumber1()
-            if (number == 6)
-                return BottleNumber6()
-            return BottleNumber(number)
+
+            return bottleNumbersMap.getOrDefault(number, BottleNumber(number))
+
         }
     }
 
