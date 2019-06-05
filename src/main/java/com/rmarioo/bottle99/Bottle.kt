@@ -5,42 +5,24 @@ class Bottle {
 
     fun verse(number: Int): String {
 
-     return "${quantity(number).capitalize()} ${container(number)} of beer on the wall, " +
-            "${quantity(number)} ${container(number)} of beer.\n" +
-                    action(number) +
-            "${quantity(successor(number))} ${container(successor(number))} of beer on the wall.\n"
+        val bottleNumber = nomberFor(number)
+        val next         = nomberFor(bottleNumber.successor())
+
+
+        return "${bottleNumber.capitalize()} of beer on the wall, " +
+               "${bottleNumber} of beer.\n" +
+                  bottleNumber.action() +
+                "${next} of beer on the wall.\n"
 
     }
 
-    private fun successor(number: Int): Int {
+    private fun nomberFor(number: Int): BottleNumber {
         if (number ==0)
-            return 99
-        return number - 1
-    }
-
-    private fun action(number: Int): String {
-        if (number ==0)
-            return "Go to the store and buy some more, "
-        return "Take ${pronoun(number)} down and pass it around, "
-    }
-
-    private fun quantity(number: Int): String {
-        if (number ==0)
-            return "no more"
-        return number.toString()
-    }
-
-    private fun pronoun(number: Int =1): String {
+            return ZeroBottleNumber()
         if (number ==1)
-            return "it"
-        return "one"
-    }
+            return OneBottleNumber()
 
-
-    private fun container(number: Int =1): String {
-        if (number ==1)
-            return "bottle"
-        return "bottles"
+        return BottleNumber(number)
     }
 
 
