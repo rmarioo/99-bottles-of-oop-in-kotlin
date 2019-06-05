@@ -21,7 +21,8 @@ class Bottle {
             return ZeroBottleNumber()
         if (number ==1)
             return OneBottleNumber()
-
+        if (number ==6)
+            return SixBottleNumber()
         return BottleNumber(number)
     }
 
