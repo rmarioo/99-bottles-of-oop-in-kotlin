@@ -12,7 +12,7 @@ Branches with refactoring steps versions:
   change" six-pack
 
 [1-shameless-green]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/1-shameless-green>
-[2_refactor_to_six_packs]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/2_refactor_to_six_packs>
-[3_extracting_class]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/3_extracting_class> 
+[2_refactor_to_six_packs]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/2-refactor_to_six_packs>
+[3_extracting_class]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/3-extracting_class> 
 [4-make-open-and-easy-change]: <https://github.com/rmarioo/99-bottles-of-oop-in-kotlin/tree/4-make-open-and-easy-change> 
 
